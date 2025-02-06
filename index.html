@@ -1,42 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Cambio de Bases</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Cambio de Bases</title>
 </head>
+
 <body class="bg-secondary">
-    
-    <nav class="navbar bg-dark">
-        <div class="container-fluid">        
-            <img class="logo navbar-brand" src="img/Logo.png">
 
-          <button class="navbar-toggler bg-white" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon bg-white"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Proximas Versiones</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div> 
-          </div>
+  <nav class="navbar bg-dark">
+    <div class="container-fluid">
+      <img class="logo navbar-brand" src="img/Logo.png">
+
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon bg-white"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Proximas Versiones</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
-    <div class="container  bg-body-tertiary rounded-3 mt-4 p-3 mb-5 shadow-lg">
-        <hr><h1 class="h1 text-center text-primary ">Convertidor de Bases</h1><hr>
+  <div class="container  bg-body-tertiary rounded-3 mt-4 p-3 mb-5 shadow-lg">
+    <hr>
+    <h1 class="h1 text-center text-primary ">Convertidor de Bases</h1>
+    <hr>
 
-        <div class="row mt-4">
+    <div class="row mt-4">
+      <div class="col-lg-7 col-md-6 mt-2">
 
-          <div class="col-lg-7 col-md-6 mt-2">
+        <div class="card">
 
-            <div class="card">
-              <h5 class="card-header">Conversiones:</h5>
-              <div class="card-body">
-                
+          <div class="toast-container position-absolute top-0 end-0 p-3" style="z-index: 9999;">
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="9000">
+              <div class="toast-header"> 
+                <strong class="me-auto"><i class="bi bi-arrow-left-circle-fill"></i> ¡Nueva Actualización!</strong>
+                <small>06 de Febrero, 2025</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                Haz clic en la pestaña "Bases a un Decimal" para convertir cualquier número de una base a un numero decimal.
+              </div>
+            </div>
+          </div>
+
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button"
+                  role="tab" aria-controls="tab1" aria-selected="true">Decimal a Bases</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button"
+                  role="tab" aria-controls="tab2" aria-selected="false">Bases a un Decimal</button>
+              </li>
+
+            </ul>
+          </div>
+          <div class="card-body">
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+
                 <div class="mb-3">
                   <label class="form-label">Ingrese un numero decimal:</label>
                   <input id="inputNumero" type="number" class="form-control" placeholder="Numero entero">
@@ -73,35 +106,81 @@
                 </div>
 
               </div>
-            </div>
 
-          </div>
+              <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
 
-          <div class="col-lg-5 col-md-6 mt-2">
-            <div class="card">
-              <h5 class="card-header">Historial:</h5>
-              <div class="card-body">
                 <div class="mb-3">
-                  <label class="form-label">Conversiones anteriores:</label>
-                  <textarea class="form-control" rows="12" id="inputHistorial" readonly></textarea>
+                  <label class="form-label">Seleccione la base que desea convertir:</label>
+                  <select id="selectBases" class="form-select" aria-label="Default select example">
+                    <option selected>Seleccione una opción</option>
+                    <option value="1">Octal</option>
+                    <option value="2">Binario</option>
+                    <option value="3">Hexadecimal</option>
+                  </select>
                 </div>
 
                 <div class="mb-3">
-                  <button class="btn btn-danger w-100" id="btnEliminarHistorial">
-                    <i class="bi bi-trash-fill"></i> Borrar Historial</button>
+                  <label class="form-label">Ingrese el numero la base:</label>
+                  <input id="inputNumBase" type="text" class="form-control" placeholder="Numero con la base seleccionada">
                 </div>
+
+                <div class="mb-3">
+                  <div class="row">
+                    <div class="col-6">
+                      <button id="btnConverDeci" class="btn btn-primary w-100">
+                        <i class="bi bi-send"></i> Convertir
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button id="btnLimpDeci" class="btn btn-secondary w-100">
+                        <i class="bi bi-trash-fill"></i> Limpiar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">La conversión es:</label>
+                  <textarea class="form-control" rows="5" id="intputResultadoDeci" readonly></textarea>
+                </div>
+
               </div>
             </div>
           </div>
-
-
         </div>
 
+      </div>
 
+      <div class="col-lg-5 col-md-6 mt-2">
+        <div class="card">
+          <h5 class="card-header">Historial:</h5>
+          <div class="card-body">
+            <div class="mb-3">
+              <label class="form-label">Conversiones anteriores:</label>
+              <textarea class="form-control" rows="12" id="inputHistorial" readonly></textarea>
+            </div>
+
+            <div class="mb-3">
+              <button class="btn btn-danger w-100" id="btnEliminarHistorial">
+                <i class="bi bi-trash-fill"></i> Borrar Historial</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+
+
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="js/app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script src="js/decimalBase.js"></script>
+<script src="js/baseDecimal.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </html>

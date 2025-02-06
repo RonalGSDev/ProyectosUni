@@ -81,7 +81,7 @@ btnConvertir.addEventListener('click', () => {
 
 btnLimpiar.addEventListener('click', ()=>{
 
-    inputHistorial.value += `${inputNumero.value} --> ${inputOpcion.options[inputOpcion.selectedIndex].text} = ${intputResultado.value} \n`;
+    inputHistorial.value += `Decimal = ${inputNumero.value}  -->  ${inputOpcion.options[inputOpcion.selectedIndex].text} = ${intputResultado.value} \n`;
 
     btnLimpiar.disabled = true;
     btnConvertir.disabled = inputOpcion.disabled = inputNumero.disabled = false;
@@ -94,5 +94,3 @@ btnLimpiar.addEventListener('click', ()=>{
 btnEliminarHistorial.addEventListener('click', ()=>{
     inputHistorial.value="";
 });
-
-
